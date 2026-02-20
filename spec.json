@@ -3,12 +3,113 @@
     "name": "new3",
     "repo_url": "https://github.com/tanishapritha/new3"
   },
-  "structure": "monorepo",
-  "apps": [
-    "api",
-    "web"
+  "features": [
+    {
+      "name": "User Authentication",
+      "status": "planned"
+    },
+    {
+      "name": "Scope Management",
+      "status": "planned"
+    },
+    {
+      "name": "Email Template Management",
+      "status": "planned"
+    },
+    {
+      "name": "AI Support Integration",
+      "status": "planned"
+    },
+    {
+      "name": "Email Sending Automation",
+      "status": "planned"
+    }
   ],
-  "database": [],
-  "endpoints": [],
-  "features": []
+  "database": [
+    {
+      "table": "scopes",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "name": "created_at",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "email_templates",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "scope_id",
+          "type": "integer"
+        },
+        {
+          "name": "subject",
+          "type": "string"
+        },
+        {
+          "name": "body",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "table": "email_lists",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "scope_id",
+          "type": "integer"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "sent_at",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "route": "/user-authentication"
+    },
+    {
+      "method": "GET",
+      "route": "/scope-management"
+    },
+    {
+      "method": "GET",
+      "route": "/email-template-management"
+    },
+    {
+      "method": "GET",
+      "route": "/ai-support-integration"
+    },
+    {
+      "method": "GET",
+      "route": "/email-sending-automation"
+    }
+  ]
 }
