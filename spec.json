@@ -1,0 +1,14 @@
+{
+  "project": {
+    "name": "new3",
+    "repo_url": "https://github.com/tanishapritha/new3"
+  },
+  "structure": "monorepo",
+  "apps": [
+    "api",
+    "web"
+  ],
+  "database": [],
+  "endpoints": [],
+  "features": []
+}
